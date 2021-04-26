@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18092"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -90,6 +91,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3659.420289855073" y="88.392857142857139"/>
+        </scene>
+        <!--訂單-->
+        <scene sceneID="vXu-Od-uHl">
+            <objects>
+                <viewController id="8tI-1J-oUI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kJG-oG-cxA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="rVs-tc-9bS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="訂單" id="mLw-59-4IU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s47-WO-G9B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3676" y="842"/>
         </scene>
         <!--Order Table View Controller-->
         <scene sceneID="pbV-m9-M4t">
@@ -358,6 +375,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="lnl-75-HYN"/>
+                        <segue destination="8tI-1J-oUI" kind="relationship" relationship="viewControllers" id="wKS-2H-tkL"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uCe-aJ-5Tw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -368,5 +386,8 @@
     <resources>
         <image name="menubar.rectangle" catalog="system" width="128" height="93"/>
         <image name="pokemon" width="1438" height="813"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

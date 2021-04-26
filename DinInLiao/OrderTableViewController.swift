@@ -109,10 +109,11 @@ class OrderTableViewController: UITableViewController {
     @IBAction func dismissKeyboard(_ sender: Any) {
     }
     @IBAction func addShoppingCart(_ sender: Any) {
+        // 檢查選項
+        guard self.checkOption() else { return }
         let controller = UIAlertController(title: "加入訂單嗎?", message: "", preferredStyle: .alert)
         let confirmAction = UIAlertAction(title: "確定", style: .default) { (_) in
-            // 檢查選項
-            guard self.checkOption() else { return }
+            
             
             // 將訂單上傳至airtable
             let order = Order(records: [.init(fields: .init(orderName: self.nameTextField.text ?? "", goodsName: self.goodsNameLabel.text ?? "", size: self.sizeTextField.text ?? "", sugar: self.sugarTextField.text ?? "", temp: self.tempTextField.text ?? "", plus: self.plusTextField.text ?? ""))])
