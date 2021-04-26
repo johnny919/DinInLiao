@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Menu View Controller-->
+        <!--Menu-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MenuViewController" customModule="DinInLiao" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pw8-OX-rg0">
-                                <rect key="frame" x="0.0" y="288" width="414" height="574"/>
+                                <rect key="frame" x="0.0" y="288" width="414" height="525"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -81,6 +81,7 @@
                             <constraint firstAttribute="trailing" secondItem="86i-JZ-xEN" secondAttribute="trailing" constant="20" id="hRG-U3-ZQa"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Menu" id="hUV-vU-SFd"/>
                     <navigationItem key="navigationItem" id="kMP-Uk-4vp"/>
                     <connections>
                         <outlet property="menuTableView" destination="pw8-OX-rg0" id="ApX-Ck-5Tz"/>
@@ -88,7 +89,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2749.275362318841" y="88.392857142857139"/>
+            <point key="canvasLocation" x="3659.420289855073" y="88.392857142857139"/>
         </scene>
         <!--Order Table View Controller-->
         <scene sceneID="pbV-m9-M4t">
@@ -325,7 +326,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ig8-IF-Ncp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3565.217391304348" y="86.383928571428569"/>
+            <point key="canvasLocation" x="4475.36231884058" y="86.383928571428569"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bIF-gz-UYa">
@@ -338,15 +339,34 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dEv-ac-53b"/>
+                        <segue destination="hWx-M6-mDs" kind="relationship" relationship="rootViewController" id="dEv-ac-53b"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cR4-UZ-pwW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1839.1304347826087" y="88.392857142857139"/>
         </scene>
+        <!--Menu-->
+        <scene sceneID="9gT-sk-5NG">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="hWx-M6-mDs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Menu" id="vaI-qe-5G9"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionIndicatorImage="menubar.rectangle" catalog="system" id="ukF-qp-Zbu">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="lnl-75-HYN"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uCe-aJ-5Tw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2749.275362318841" y="88.392857142857139"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="menubar.rectangle" catalog="system" width="128" height="93"/>
         <image name="pokemon" width="1438" height="813"/>
     </resources>
 </document>

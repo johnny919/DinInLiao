@@ -145,7 +145,9 @@ class OrderTableViewController: UITableViewController {
     }
     func orderEnd() {
         let finallyController = UIAlertController(title: "訂單", message: "新增成功!", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            self.navigationController?.popViewController(animated: true)
+        }
         finallyController.addAction(okAction)
         present(finallyController, animated: true, completion: nil)
     }
